@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AR.js A-Frame Location-based</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script type='text/javascript'
+        src='https://raw.githack.com/AR-js-org/AR.js/3.4.5/three.js/build/ar-threex-location-only.js'></script>
+    <script type='text/javascript'
+        src='https://raw.githack.com/AR-js-org/AR.js/3.4.5/aframe/build/aframe-ar.js'></script>
+</head>
+
+<body>
+    <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: true'
+        renderer='antialias: true; alpha: true'>
+        <a-assets></a-assets>
+        <a-asset-item id="tree_obj" src="assets/tree.obj"></a-asset-item>
+        </a-assets>
+        <a-camera gps-new-camera='gpsMinDistance: 5000'></a-camera>
+        <a-entity obj-model="obj: #tree_obj" scale="1 1 1" rotation="-90 0 0"
+            gps-new-entity-place="latitude: 35.662038; longitude: 139.697880;"></a-entity>
+        <a-entity obj-model="obj: #tree_obj" scale="1 1 1" rotation="-90 0 0"
+            gps-new-entity-place="latitude: 35.662396; longitude: 139.696280;"></a-entity>
+        <a-entity obj-model="obj: #tree_obj" scale="1 1 1" rotation="-90 0 0"
+            gps-new-entity-place="latitude: 35.643687; longitude: 139.669631;"></a-entity>
+
+    </a-scene>
+</body>
+
+</html>
